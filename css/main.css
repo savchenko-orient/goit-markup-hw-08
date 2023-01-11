@@ -398,6 +398,11 @@ body {
   letter-spacing: 0.03em;
   color: #212121;
 }
+@media screen and (min-width: 1200px) {
+  .modal-form__title {
+    line-height: 1.15;
+  }
+}
 
 .form-list {
   display: -webkit-box;
@@ -483,6 +488,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.03em;
+  color: #757575;
 }
 .checkbox__input {
   position: absolute;
@@ -513,18 +523,7 @@ body {
   background-color: #2196f3;
   border: none;
 }
-.checkbox__text {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.1666666667;
-  letter-spacing: 0.03em;
-  color: #757575;
-}
 .checkbox__link {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.1666666667;
-  letter-spacing: 0.03em;
   color: #2196f3;
   text-decoration: underline;
 }
