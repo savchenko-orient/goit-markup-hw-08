@@ -2,17 +2,24 @@
   height: 60px;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid $gray-border-color;
 
   @media (min-width: 768px) {
     height: 80px;
   }
+  @media (max-width: 1199px) {
+    justify-content: space-between;
+  }
 }
 
 .blue-text {
   color: $button-hover-color;
+}
+.header--logo {
+  @media (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 
 .menu-btn-open {
@@ -77,12 +84,20 @@
   }
 }
 .header--nav {
+  @media (min-width: 1200px) {
+    margin-right: 344px;
+  }
 }
 .contakts {
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 10px;
+
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    gap: 30px;
+  }
   &__item {
   }
 

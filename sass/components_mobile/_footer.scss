@@ -14,11 +14,19 @@
     justify-content: space-around;
     flex-direction: row;
   }
+  @media (min-width: 1200px) {
+    justify-content: space-between;
+    align-items: baseline;
+  }
 }
 .footer-contacts {
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  @media (min-width: 1200px) {
+    align-items: flex-start;
+  }
 
   gap: 8px;
   // .footer-contacts__item
@@ -64,19 +72,28 @@
     font-size: 14px;
     line-height: calc(16 / 14);
     letter-spacing: 0.03em;
-    text-align: center;
 
     text-transform: uppercase;
 
     color: $primary-white-color;
+
+    @media (max-width: 1199px) {
+      text-align: center;
+    }
   }
 }
 
 .footer-form {
-  width: 100%;
-  left: 50%;
-  right: 50%;
-  max-width: 450px;
+  @media (max-width: 1199px) {
+    width: 100%;
+    left: 50%;
+    right: 50%;
+    max-width: 450px;
+  }
+  @media (min-width: 1200px) {
+    display: flex;
+    align-items: flex-end;
+  }
 
   box-sizing: border-box;
 
@@ -85,8 +102,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-    margin-bottom: 20px;
+    @media (max-width: 1199px) {
+      margin-bottom: 20px;
+    }
+    @media (min-width: 1200px) {
+      margin-right: 12px;
+      align-items: flex-start;
+    }
   }
 
   // .footer-form__title
@@ -121,6 +143,9 @@
 
     background-color: $dark-bg-color;
     color: $primary-white-color;
+    @media (min-width: 1200px) {
+      width: 358px;
+    }
   }
 
   // .footer-form__btn
@@ -144,6 +169,10 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: none;
     border-radius: 4px;
+
+    @media (min-width: 1200px) {
+      height: 50px;
+    }
 
     &:hover,
     &:focus {

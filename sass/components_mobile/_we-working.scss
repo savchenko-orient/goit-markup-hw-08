@@ -1,7 +1,8 @@
 .we-working {
-  display: none;
   // .we-working__title
-
+  @media (max-width: 1199px) {
+    display: none;
+  }
   &__title {
     margin-bottom: 50px;
     font-weight: 700;
@@ -14,11 +15,15 @@
   // .we-working__list
 
   &__list {
+    display: flex;
   }
 
   // .we-working__item
 
   &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 
   // .we-working__thumb
