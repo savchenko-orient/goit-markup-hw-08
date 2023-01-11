@@ -1,13 +1,19 @@
 @import "./utils/variables";
 @import "./utils/reset";
-@import "./components/header";
-@import "./components/logo";
-@import "./components/modal";
-@import "./components/hero";
-@import "./components/features";
-@import "./components/we-working";
-@import "./components/our-team";
-@import "./components/social";
-@import "./components/clients";
-@import "./components/footer";
-@import "./components/portfolio";
+
+@import "./components_mobile/container";
+@import "./components_mobile/header";
+@import "./components_mobile/mobile-menu";
+
+@import "./components_mobile/logo";
+@import "./components_mobile/modal";
+@import "./components_mobile/hero";
+@import "./components_mobile/section";
+
+@import "./components_mobile/features";
+@import "./components_mobile/we-working";
+@import "./components_mobile/our-team";
+@import "./components_mobile/social";
+@import "./components_mobile/clients";
+@import "./components_mobile/footer";
+@import "./components_mobile/portfolio";

@@ -1,0 +1,60 @@
+.our-team {
+  background-color: $gray-bg-color;
+
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: calc(33 / 28);
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+
+  &__list {
+  }
+
+  &__item {
+    padding-bottom: 24px;
+
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    background-color: $primary-white-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 270px;
+  }
+
+  &__name {
+    margin-top: 30px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(19 / 16);
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+
+  &__text {
+    margin-top: 10px;
+    margin-bottom: 16px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(19 / 16);
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: $secondary-text-color;
+  }
+}

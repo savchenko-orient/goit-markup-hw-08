@@ -19,7 +19,7 @@
 
 <body>
     <!-- modal -->
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden " data-modal>
         <div class="modal">
             <button href="#" class="modal__btn-close" data-modal-close>
                 <svg class="modal__icon">
@@ -96,11 +96,63 @@
         </div>
     </div>
 
+
+
     <!-- Header -->
     <header>
         <div class="container header">
-            <a href="#" class="logo header--logo"><span class="blue-text">Web</span>Studio</a>
+            <!-- Mobile menu -->
+            <div class="mobile-menu js-menu-container" id="mobile-menu">
+                <button href="#" class="menu-toggle mobile-menu__btn-close js-close-menu" data-modal-close>
+                    <svg class="menu-icon" width="18" height="18">
+                        <use href="./images/icons.svg#close"></use>
+                    </svg>
+                </button>
 
+                <div class="mobile-menu__wrapper">
+                    <nav class="mobile-nav ">
+                        <ul class="mobile-nav__list">
+                            <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Студія</a></li>
+                            <li class="mobile-nav__item"><a href="./portfolio.html"
+                                    class="mobile-nav__link">Портфоліо</a>
+                            </li>
+                            <li class="mobile-nav__item"><a href="./contacts.html" class="mobile-nav__link">Контакти</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div>
+                        <ul class="mobile-contakts">
+                            <li class="mobile-contakts__item">
+                                <a class="mobile-contakts__link mobile-contakts__link--tel
+                                            " href="tel:+380961111111">
+                                    +38 096 111 11 11
+                                </a>
+                            </li>
+                            <li class="mobile-contakts__item">
+                                <a class="mobile-contakts__link" href="mailto:info@devstudio.com">
+
+                                    info@devstudio.com
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="mobile-social">
+                            <li class="mobile-social__item"><a href="#" class="mobile-social__link">Instagram</a></li>
+                            <li class="mobile-social__item"><a href="#" class="mobile-social__link">Twitter</a></li>
+                            <li class="mobile-social__item"><a href="#" class="mobile-social__link">Facebook</a></li>
+                            <li class="mobile-social__item"><a href="#" class="mobile-social__link">Linkedin</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="#" class="logo header--logo"><span class="blue-text">Web</span>Studio</a>
+            <button class="menu-toggle js-open-menu menu-btn-open" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="menu-icon" width="24" height="18">
+                    <use href="./images/icons.svg#menu-icon"></use>
+                </svg>
+            </button>
             <nav class="nav header--nav">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#" class="nav__link">Студія</a></li>
@@ -379,44 +431,56 @@
                 <ul class="clients__list">
                     <li class="clients__item">
                         <a class="clients__link">
-                            <svg class="clients__icon " width="41" height="47">
-                                <use href="./images/icons.svg#company_1"></use>
-                            </svg>
+                            <div class="clients__wrapper">
+                                <svg class="clients__icon " width="44" height="49">
+                                    <use href="./images/icons.svg#company_1"></use>
+                                </svg>
+                            </div>
                         </a>
                     </li>
                     <li class="clients__item">
                         <a class="clients__link">
-                            <svg class="clients__icon " width="40" height="52">
-                                <use href="./images/icons.svg#company_2"></use>
-                            </svg>
+                            <div class="clients__wrapper">
+                                <svg class="clients__icon " width="40" height="52">
+                                    <use href="./images/icons.svg#company_2"></use>
+                                </svg>
+                            </div>
                         </a>
                     </li>
                     <li class="clients__item">
                         <a class="clients__link">
-                            <svg class="clients__icon " width="43" height="42">
-                                <use href="./images/icons.svg#company_3"></use>
-                            </svg>
+                            <div class="clients__wrapper">
+                                <svg class="clients__icon " width="43" height="42">
+                                    <use href="./images/icons.svg#company_3"></use>
+                                </svg>
+                            </div>
                         </a>
                     </li>
                     <li class="clients__item">
                         <a class="clients__link">
-                            <svg class="clients__icon" width="84" height="41">
-                                <use href="./images/icons.svg#company_4"></use>
-                            </svg>
+                            <div class="clients__wrapper">
+                                <svg class="clients__icon" width="84" height="41">
+                                    <use href="./images/icons.svg#company_4"></use>
+                                </svg>
+                            </div>
                         </a>
                     </li>
                     <li class="clients__item">
                         <a class="clients__link">
-                            <svg class="clients__icon" width="63" height="45">
-                                <use href="./images/icons.svg#company_5"></use>
-                            </svg>
+                            <div class="clients__wrapper">
+                                <svg class="clients__icon" width="63" height="45">
+                                    <use href="./images/icons.svg#company_5"></use>
+                                </svg>
+                            </div>
                         </a>
                     </li>
                     <li class="clients__item">
                         <a class="clients__link">
-                            <svg class="clients__icon" width="94" height="44">
-                                <use href="./images/icons.svg#company_6"></use>
-                            </svg>
+                            <div class="clients__wrapper">
+                                <svg class="clients__icon" width="94" height="44">
+                                    <use href="./images/icons.svg#company_6"></use>
+                                </svg>
+                            </div>
                         </a>
                     </li>
                 </ul>
@@ -426,8 +490,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
+    <footer class="footer ">
+        <div class="container section">
             <div class="footer-wrapper">
                 <div class="footer-contacts">
                     <a href="#" class="logo footer--logo"><span class="blue-text">Web</span>Studio</a>
@@ -501,7 +565,7 @@
             </div>
     </footer>
 
-
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 

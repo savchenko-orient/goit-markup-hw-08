@@ -1,0 +1,151 @@
+.mobile-menu {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 48px 0 48px 40px;
+  background-color: $primary-white-color;
+  z-index: 100;
+
+  overflow: hidden;
+
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+
+  &__btn-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    width: 40px;
+    height: 40px;
+
+    background-color: transparent;
+    border: none;
+
+    &:hover .menu-icon,
+    &:focus .menu-icon {
+      fill: #2196f3;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+  }
+}
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
+.mobile-nav {
+  // margin-bottom: 302px;
+  // .mobile-nav__list
+
+  &__list {
+  }
+
+  // .mobile-nav__item
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  // .mobile-nav__link
+
+  &__link {
+    position: relative;
+
+    font-weight: 500;
+    font-size: 40px;
+    line-height: calc(47 / 40);
+    letter-spacing: 0.02em;
+
+    color: $primary-text-color;
+    transition: color 250ms $timing-function;
+
+    &[href="#"] {
+      color: $button-hover-color;
+    }
+    &:hover,
+    &:focus {
+      color: $button-hover-color;
+    }
+  }
+}
+
+.mobile-contakts {
+  // .mobile-contakts__item
+  margin-bottom: 64px;
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  // .mobile-contakts__link
+
+  &__link {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: calc(28 / 24);
+    letter-spacing: 0.02em;
+
+    color: $secondary-text-color;
+    fill: $secondary-text-color;
+
+    transition: color 250ms $timing-function, fill 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+      color: $button-hover-color;
+    }
+
+    &--tel {
+      font-size: 34px;
+      line-height: calc(40 / 34);
+      color: $button-hover-color;
+    }
+  }
+}
+.mobile-social {
+  // .mobile-social__item
+  display: flex;
+  gap: 20px;
+
+  &__item {
+    position: relative;
+    &:not(:first-child)::after {
+      content: "";
+      position: absolute;
+
+      display: block;
+      left: -10px;
+      width: 1px;
+      height: 100%;
+      bottom: 0;
+
+      background-color: rgba(33, 33, 33, 0.2);
+    }
+  }
+
+  // .mobile-social__link
+
+  &__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    letter-spacing: 0.02em;
+
+    color: #2196f3;
+  }
+}
