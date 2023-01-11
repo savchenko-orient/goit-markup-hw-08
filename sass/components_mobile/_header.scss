@@ -5,6 +5,10 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid $gray-border-color;
+
+  @media (min-width: 768px) {
+    height: 80px;
+  }
 }
 
 .blue-text {
@@ -32,6 +36,8 @@
 
 .nav {
   &__list {
+    display: flex;
+    gap: 50px;
   }
 
   &__item {
@@ -39,6 +45,7 @@
 
   &__link {
     position: relative;
+    padding: 32px 0;
 
     font-weight: 500;
     font-size: 14px;
@@ -72,6 +79,10 @@
 .header--nav {
 }
 .contakts {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
   &__item {
   }
 
@@ -96,10 +107,12 @@
 .mail-icon {
   width: 16px;
   height: 12px;
+  margin-right: 8px;
 }
 .phone-icon {
   width: 10px;
   height: 16px;
+  margin-right: 8px;
 }
 
 @media screen and (max-width: 767px) {

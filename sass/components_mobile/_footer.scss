@@ -8,6 +8,12 @@
   flex-direction: column;
   width: 100%;
   gap: 60px;
+
+  @media (min-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+  }
 }
 .footer-contacts {
   display: flex;
