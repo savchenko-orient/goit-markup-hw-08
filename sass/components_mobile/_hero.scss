@@ -8,11 +8,11 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../images/hero-img.jpg");
+    url(../images/hero/m-hero@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  // background-size: contain;
   background-color: #c4c4c4;
+
   // .hero__container
 
   &__container {
@@ -25,7 +25,6 @@
   }
 
   // .hero__title
-
   &__title {
     margin-bottom: 30px;
     font-weight: 900;
@@ -61,6 +60,62 @@
       cursor: pointer;
       background-color: #188ce8;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (-o-mini-device-pixel-ratio: 2/1),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero/m-hero@2x.jpg);
+  }
+
+  @media screen and (min-width: 577px) and (max-width: 960px) {
+    background: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero/t-hero@1x.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-mini-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero/t-hero@2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    background: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero/d-hero@1x.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-mini-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero/d-hero@2x.jpg);
     }
   }
 }
