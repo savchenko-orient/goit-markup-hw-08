@@ -63,8 +63,6 @@
     }
   }
   @media screen and (min-device-pixel-ratio: 2),
-    screen and (-webkit-min-device-pixel-ratio: 2),
-    screen and (-o-mini-device-pixel-ratio: 2/1),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
     background: linear-gradient(
@@ -84,8 +82,6 @@
       url(../images/hero/t-hero@1x.jpg);
 
     @media screen and (min-device-pixel-ratio: 2),
-      screen and (-webkit-min-device-pixel-ratio: 2),
-      screen and (-o-mini-device-pixel-ratio: 2/1),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
       background: linear-gradient(
@@ -106,8 +102,6 @@
       url(../images/hero/d-hero@1x.jpg);
 
     @media screen and (min-device-pixel-ratio: 2),
-      screen and (-webkit-min-device-pixel-ratio: 2),
-      screen and (-o-mini-device-pixel-ratio: 2/1),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
       background: linear-gradient(
