@@ -12,7 +12,6 @@
     const scrollLockMethod = !isMenuOpen
       ? 'disableBodyScroll'
       : 'enableBodyScroll';
-    console.log(document.body);
     bodyScrollLock[scrollLockMethod](document.body);
   };
 
