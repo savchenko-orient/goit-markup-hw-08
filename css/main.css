@@ -351,10 +351,12 @@ body {
 
 .backdrop {
   position: fixed;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 100;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -480,15 +482,7 @@ body {
   -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-input__input:not(:-moz-placeholder-shown) {
-  outline: none;
-  border-color: #2196f3;
-}
-.form-input__input:not(:-ms-input-placeholder) {
-  outline: none;
-  border-color: #2196f3;
-}
-.form-input__input:focus, .form-input__input:hover, .form-input__input:not(:placeholder-shown) {
+.form-input__input:focus, .form-input__input:hover {
   outline: none;
   border-color: #2196f3;
 }
@@ -502,19 +496,64 @@ body {
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-input__input:not(:-moz-placeholder-shown) + .form-input__icon {
-  fill: #2196f3;
-}
-.form-input__input:not(:-ms-input-placeholder) + .form-input__icon {
-  fill: #2196f3;
-}
-.form-input__input:focus + .form-input__icon, .form-input__input:hover + .form-input__icon, .form-input__input:not(:placeholder-shown) + .form-input__icon {
+.form-input__input:focus + .form-input__icon, .form-input__input:hover + .form-input__icon {
   fill: #2196f3;
 }
 .form-input__input--comment {
   height: 120px;
-  resize: none;
   padding: 12px 16px;
+  resize: none;
+}
+.form-input__input--comment::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 0.0833333333;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: rgba(117, 117, 117, 0.5);
+  text-align: left;
+}
+.form-input__input--comment::-moz-placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 0.0833333333;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: rgba(117, 117, 117, 0.5);
+  text-align: left;
+}
+.form-input__input--comment:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 0.0833333333;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: rgba(117, 117, 117, 0.5);
+  text-align: left;
+}
+.form-input__input--comment::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 0.0833333333;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: rgba(117, 117, 117, 0.5);
+  text-align: left;
+}
+.form-input__input--comment::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 0.0833333333;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: rgba(117, 117, 117, 0.5);
+  text-align: left;
+}
+@media screen and (min-width: 1200px) {
+  .form-input__input--comment {
+    max-width: 448px;
+    max-height: 120px;
+  }
 }
 
 .checkbox {
@@ -593,17 +632,16 @@ body {
 }
 
 .hero {
+  max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/m-hero@1x.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/m-hero@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: #c4c4c4;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/m-hero@1x.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/m-hero@1x.jpg);
 }
 .hero__title {
   width: 360px;
@@ -614,6 +652,7 @@ body {
   font-size: 26px;
   line-height: 1.6153846154;
   letter-spacing: 0.06em;
+  text-align: center;
   text-transform: uppercase;
   color: #ffffff;
 }
@@ -662,32 +701,32 @@ body {
 }
 @media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
-    background: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/m-hero@2x.jpg);
-    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/m-hero@2x.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/m-hero@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/m-hero@2x.jpg);
   }
 }
 @media screen and (min-width: 577px) and (max-width: 960px) {
   .hero {
-    background: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/t-hero@1x.jpg);
-    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/t-hero@1x.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/t-hero@1x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/t-hero@1x.jpg);
   }
 }
 @media screen and (min-width: 577px) and (max-width: 960px) and (min-device-pixel-ratio: 2), screen and (min-width: 577px) and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 577px) and (max-width: 960px) and (min-resolution: 192dpi), screen and (min-width: 577px) and (max-width: 960px) and (min-resolution: 2dppx) {
   .hero {
-    background: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/t-hero@2x.jpg);
-    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/t-hero@2x.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/t-hero@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/t-hero@2x.jpg);
   }
 }
 @media screen and (min-width: 960px) {
   .hero {
-    background: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/d-hero@1x.jpg);
-    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/d-hero@1x.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/d-hero@1x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/d-hero@1x.jpg);
   }
 }
 @media screen and (min-width: 960px) and (min-device-pixel-ratio: 2), screen and (min-width: 960px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 960px) and (min-resolution: 192dpi), screen and (min-width: 960px) and (min-resolution: 2dppx) {
   .hero {
-    background: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/d-hero@2x.jpg);
-    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/d-hero@2x.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/d-hero@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/d-hero@2x.jpg);
   }
 }
 
@@ -777,7 +816,6 @@ body {
   }
 }
 .we-working__title {
-  margin-top: 94px;
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -822,6 +860,10 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+.padding-top-0 {
+  padding-top: 0;
 }
 
 .our-team {

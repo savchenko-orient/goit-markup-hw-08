@@ -1,31 +1,21 @@
 .hero {
+  max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
 
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/hero/m-hero@1x.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-color: #c4c4c4;
-
-  // .hero__container
-
-  // &__container {
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-
-  //   margin: 0 auto;
-  // }
+  // background-color: #c4c4c4;
 
   // .hero__title
   &__title {
@@ -38,6 +28,7 @@
     font-size: 26px;
     line-height: calc(42 / 26);
     letter-spacing: 0.06em;
+    text-align: center;
     text-transform: uppercase;
     color: $primary-white-color;
 
@@ -88,7 +79,7 @@
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-    background: linear-gradient(
+    background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
@@ -97,7 +88,7 @@
   }
 
   @media screen and (min-width: 577px) and (max-width: 960px) {
-    background: linear-gradient(
+    background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
@@ -107,7 +98,7 @@
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background: linear-gradient(
+      background-image: linear-gradient(
           to right,
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
@@ -117,7 +108,7 @@
   }
 
   @media screen and (min-width: 960px) {
-    background: linear-gradient(
+    background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
@@ -127,7 +118,7 @@
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background: linear-gradient(
+      background-image: linear-gradient(
           to right,
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
